@@ -117,7 +117,10 @@ INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUE
 (3,	2,	'Manajemen Media',	'',	'fas fa-fw fa-school',	'Y'),
 (4,	2,	'Struktur Organisasi',	'struktur',	'fas fa-fw fa-sitemap',	'Y'),
 (5,	1,	'Manajemen User',	'user',	'fas fa-fw fa-user',	'Y'),
-(6,	2,	'Profile',	'',	'fas fa-fw fa-home',	'Y');
+(6,	2,	'Profile',	'',	'fas fa-fw fa-home',	'Y'),
+(7,	2,	'Staff',	'staff',	'fas fa-fw fa-user-tie',	'Y'),
+(8,	2,	'Kelas',	'classes',	'fas fa-fw fa-chalkboard-teacher',	'Y'),
+(9,	2,	'Siswa',	'students',	'fas fa-fw fa-user-graduate',	'Y');
 
 DROP TABLE IF EXISTS `opening`;
 CREATE TABLE `opening` (
