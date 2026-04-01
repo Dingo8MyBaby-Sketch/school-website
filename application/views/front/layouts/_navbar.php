@@ -41,6 +41,15 @@
 				<li class="nav-item <?php if($title == 'Berita') echo "active"; ?>">
 				<a class="nav-link" href="<?= base_url('blog') ?>">Berita</a>
 				</li>
+				<li class="nav-item <?php if($title == 'Staff') echo "active"; ?>">
+				<a class="nav-link" href="<?= base_url('staf') ?>">Staff</a>
+				</li>
+				<li class="nav-item <?php if($title == 'Kelas') echo "active"; ?>">
+				<a class="nav-link" href="<?= base_url('kelas') ?>">Kelas</a>
+				</li>
+				<li class="nav-item <?php if($title == 'Siswa') echo "active"; ?>">
+				<a class="nav-link" href="<?= base_url('siswa') ?>">Siswa</a>
+				</li>
 			</ul>
 		</div>
 	</div>
