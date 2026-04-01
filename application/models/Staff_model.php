@@ -33,7 +33,7 @@ class Staff_model extends CI_Model {
 	public function getDefaultValues()
 	{
 		return [
-			'name'        	=> '',
+			'name'          => '',
 			'position'      => '',
 			'email'         => '',
 			'phone'         => '',

@@ -38,7 +38,7 @@ class Classes_model extends CI_Model {
 	public function getDefaultValues()
 	{
 		return [
-			'name'        	=> '',
+			'name'          => '',
 			'grade'         => '',
 			'description'   => '',
 			'schedule'      => '',

@@ -38,7 +38,7 @@ class Students_model extends CI_Model {
 	{
 		return [
 			'student_id'    => '',
-			'name'        	=> '',
+			'name'          => '',
 			'class_id'      => '',
 			'email'         => '',
 			'phone'         => '',
