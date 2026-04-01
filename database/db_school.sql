@@ -257,7 +257,8 @@ CREATE TABLE `classes` (
   `photo` varchar(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  KEY `teacher_id` (`teacher_id`)
+  KEY `teacher_id` (`teacher_id`),
+  CONSTRAINT `fk_classes_teacher` FOREIGN KEY (`teacher_id`) REFERENCES `staff` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `students`;
@@ -273,7 +274,8 @@ CREATE TABLE `students` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `student_id` (`student_id`),
-  KEY `class_id` (`class_id`)
+  KEY `class_id` (`class_id`),
+  CONSTRAINT `fk_students_class` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- 2021-01-01 04:39:58
