@@ -29,7 +29,7 @@
 									<p class="card-text"><small><i class="fas fa-phone"></i> <?= $s->phone ?></small></p>
 								<?php endif; ?>
 								<?php if(!empty($s->bio)): ?>
-									<p class="card-text"><?= substr($s->bio, 0, 100) ?><?= strlen($s->bio) > 100 ? '...' : '' ?></p>
+									<p class="card-text"><?= html_escape(substr($s->bio, 0, 100)) ?><?= strlen($s->bio) > 100 ? '...' : '' ?></p>
 								<?php endif; ?>
 							</div>
 						</div>

@@ -26,10 +26,10 @@
 									<p class="card-text"><strong>Wali Kelas:</strong> <?= $c->teacher_name ?></p>
 								<?php endif; ?>
 								<?php if(!empty($c->description)): ?>
-									<p class="card-text"><?= substr($c->description, 0, 150) ?><?= strlen($c->description) > 150 ? '...' : '' ?></p>
+									<p class="card-text"><?= html_escape(substr($c->description, 0, 150)) ?><?= strlen($c->description) > 150 ? '...' : '' ?></p>
 								<?php endif; ?>
 								<?php if(!empty($c->schedule)): ?>
-									<p class="card-text"><small class="text-muted"><strong>Jadwal:</strong> <?= nl2br($c->schedule) ?></small></p>
+									<p class="card-text"><small class="text-muted"><strong>Jadwal:</strong> <?= nl2br(html_escape($c->schedule)) ?></small></p>
 								<?php endif; ?>
 							</div>
 						</div>
