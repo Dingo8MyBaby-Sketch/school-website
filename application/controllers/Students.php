@@ -169,7 +169,7 @@ class Students extends CI_Controller {
 				if($upload){
 					$student = $this->students->getDataById($id);
 
-					if(file_exists('img/students/' . $student->photo) && $student->photo){
+					if($student->photo && file_exists('img/students/' . $student->photo)){
 						unlink('img/students/' . $student->photo);
 					}
 					
@@ -191,7 +191,7 @@ class Students extends CI_Controller {
 		$id = $this->input->post('id', true);
 		$student = $this->students->getDataById($id);
 
-		if(file_exists('img/students/' . $student->photo) && $student->photo){
+		if($student->photo && file_exists('img/students/' . $student->photo)){
 			unlink('img/students/' . $student->photo);
 		}
 

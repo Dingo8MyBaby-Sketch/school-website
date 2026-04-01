@@ -154,7 +154,7 @@ class Staff extends CI_Controller {
 				if($upload){
 					$staff = $this->staff->getDataById($id);
 
-					if(file_exists('img/staff/' . $staff->photo) && $staff->photo){
+					if($staff->photo && file_exists('img/staff/' . $staff->photo)){
 						unlink('img/staff/' . $staff->photo);
 					}
 					
@@ -176,7 +176,7 @@ class Staff extends CI_Controller {
 		$id = $this->input->post('id', true);
 		$staff = $this->staff->getDataById($id);
 
-		if(file_exists('img/staff/' . $staff->photo) && $staff->photo){
+		if($staff->photo && file_exists('img/staff/' . $staff->photo)){
 			unlink('img/staff/' . $staff->photo);
 		}
 
