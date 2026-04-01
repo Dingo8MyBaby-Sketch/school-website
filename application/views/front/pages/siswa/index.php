@@ -15,15 +15,15 @@
 					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
 						<div class="card h-100">
 							<?php if(!empty($st->photo)): ?>
-								<img src="<?= base_url('img/students/' . $st->photo) ?>" class="card-img-top" alt="<?= $st->name ?>" style="height: 250px; object-fit: cover;">
+								<img src="<?= base_url('img/students/' . $st->photo) ?>" class="card-img-top" alt="<?= html_escape($st->name) ?>" style="height: 250px; object-fit: cover;">
 							<?php else: ?>
-								<img src="<?= base_url('img/identitas/logo.png') ?>" class="card-img-top" alt="<?= $st->name ?>" style="height: 250px; object-fit: cover;">
+								<img src="<?= base_url('img/identitas/logo.png') ?>" class="card-img-top" alt="<?= html_escape($st->name) ?>" style="height: 250px; object-fit: cover;">
 							<?php endif; ?>
 							<div class="card-body">
-								<h6 class="card-title"><?= $st->name ?></h6>
-								<p class="card-text"><small><strong>NIS:</strong> <?= $st->student_id ?></small></p>
+								<h6 class="card-title"><?= html_escape($st->name) ?></h6>
+								<p class="card-text"><small><strong>NIS:</strong> <?= html_escape($st->student_id) ?></small></p>
 								<?php if(!empty($st->class_name)): ?>
-									<p class="card-text"><small><strong>Kelas:</strong> <?= $st->class_name ?> (<?= $st->grade ?>)</small></p>
+									<p class="card-text"><small><strong>Kelas:</strong> <?= html_escape($st->class_name) ?> (<?= html_escape($st->grade) ?>)</small></p>
 								<?php endif; ?>
 							</div>
 						</div>

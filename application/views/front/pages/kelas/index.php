@@ -15,15 +15,15 @@
 					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4">
 						<div class="card h-100">
 							<?php if(!empty($c->photo)): ?>
-								<img src="<?= base_url('img/classes/' . $c->photo) ?>" class="card-img-top" alt="<?= $c->name ?>" style="height: 250px; object-fit: cover;">
+								<img src="<?= base_url('img/classes/' . $c->photo) ?>" class="card-img-top" alt="<?= html_escape($c->name) ?>" style="height: 250px; object-fit: cover;">
 							<?php else: ?>
-								<img src="<?= base_url('img/identitas/logo.png') ?>" class="card-img-top" alt="<?= $c->name ?>" style="height: 250px; object-fit: cover;">
+								<img src="<?= base_url('img/identitas/logo.png') ?>" class="card-img-top" alt="<?= html_escape($c->name) ?>" style="height: 250px; object-fit: cover;">
 							<?php endif; ?>
 							<div class="card-body">
-								<h5 class="card-title"><?= $c->name ?></h5>
-								<p class="card-text"><span class="badge badge-primary"><?= $c->grade ?></span></p>
+								<h5 class="card-title"><?= html_escape($c->name) ?></h5>
+								<p class="card-text"><span class="badge badge-primary"><?= html_escape($c->grade) ?></span></p>
 								<?php if(!empty($c->teacher_name)): ?>
-									<p class="card-text"><strong>Wali Kelas:</strong> <?= $c->teacher_name ?></p>
+									<p class="card-text"><strong>Wali Kelas:</strong> <?= html_escape($c->teacher_name) ?></p>
 								<?php endif; ?>
 								<?php if(!empty($c->description)): ?>
 									<p class="card-text"><?= html_escape(substr($c->description, 0, 150)) ?><?= strlen($c->description) > 150 ? '...' : '' ?></p>
